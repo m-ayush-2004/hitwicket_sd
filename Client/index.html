@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitwicket Chess Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@400;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="timer">5:00</div> 
+    <div style="display: flex; align-items: center;">
+        <h1 class="Bungee Shade">Chess Game</h1>
+        <div class="help">
+            <div class="question">?</div>
+            <div class="popup" style = "z-index: 2;">
+                <div id="rules-container" style="flex: 1;">
+                    <h2>Rules</h2>
+                    <div id="pawn-rule">
+                        <h3>Pawn (P1, P2, P3)</h3>
+                        <ul>
+                            <li>L (left)</li>
+                            <li>R (right)</li>
+                            <li>FW (forward)</li>
+                            <li>B (backward)</li>
+                        </ul>
+                    </div>
+                    <div id="hero1-rule">
+                        <h3>Hero 1 (2-block)</h3>
+                        <ul>
+                            <li>L (left)</li>
+                            <li>R (right)</li>
+                            <li>FW (forward)</li>
+                            <li>B (backward)</li>
+                        </ul>
+                    </div>
+                    <div id="hero2-rule">
+                        <h3>Hero 2 (2-block diagonally)</h3>
+                        <ul>
+                            <li>FL (forward-left)</li>
+                            <li>FR (forward-right)</li>
+                            <li>BL (backward-left)</li>
+                            <li>BR (backward-right)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <a href="https://www.linkedin.com/in/ayush-gupta-58aba2297/" target="_blank">Made by Ayush Gupta</a>
+    </div>
+    <div>
+        <div id="winner" style="display: none;">Winner is <span class="player">A</span> </div>
+    </div>
+    <div id="main-container" style="display: flex;">
+        <div id="game-container" style="flex: 1;">
+            <div id="game-board"></div>
+            <div id="controls">
+                <div id="player-a-controls">
+                    <input type="text" id="player-a-move" placeholder="A move (e.g., P1:FW)">
+                    <button id="player-a-submit">Submit Move</button>
+                    <button id="end-game">End Game</button> <!-- Added End Game button -->
+                </div>
+                <div id="player-b-controls" style="display: none;">
+                    <input type="text" id="player-b-move" placeholder="B move (e.g., P1:L)">
+                    <button id="player-b-submit">Submit Move</button>
+                    <button id="end-game">End Game</button> <!-- Added End Game button -->
+                </div>
+            </div>
+            
+            <!-- Game Status and Move History within Game Container -->
+            <div id="game-status"></div>
+            <div id="move-history-container">
+                <h3 id="move-history-title">Move History</h3>
+                <div id="move-history"></div>
+            </div>           
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
